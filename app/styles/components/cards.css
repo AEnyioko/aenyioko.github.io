@@ -334,6 +334,29 @@
   text-transform: none;
 }
 
+.degree-container .degree-coursework {
+  margin-top: 0.75rem;
+}
+
+.degree-container .degree-coursework-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-fg);
+  margin-bottom: 0.5rem;
+}
+
+.degree-container .points {
+  margin-top: 0;
+}
+
+.degree-container .points li {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+  padding: 0;
+  color: var(--color-fg-light);
+}
+
 /* ========================================
    COURSE CARDS
    ======================================== */

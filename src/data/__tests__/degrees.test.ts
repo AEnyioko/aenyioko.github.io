@@ -57,4 +57,14 @@ describe('degrees data', () => {
       expect(degree.degree.trim().length).toBeGreaterThan(0);
     }
   });
+
+  it('includes coursework on the graduate degree', () => {
+    const graduateDegree = degrees[0];
+
+    expect(graduateDegree.coursework).toBeDefined();
+    expect(graduateDegree.coursework?.length).toBeGreaterThan(0);
+    expect(graduateDegree.coursework).toContain(
+      'BMI 5301 — Introduction to Bioinformatics',
+    );
+  });
 });

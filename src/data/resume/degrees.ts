@@ -3,6 +3,7 @@ export interface Degree {
   degree: string;
   link: string;
   year: number;
+  coursework?: string[];
 }
 
 const degrees: Degree[] = [
@@ -11,6 +12,11 @@ const degrees: Degree[] = [
     degree: 'Master of Science in Biomedical Informatics (Expected May 2027)',
     link: 'https://www.uth.edu/bmi',
     year: 2027,
+    coursework: [
+      'BMI 5301 — Introduction to Bioinformatics',
+      'BMI 5310 — Machine Learning in Biomedical Informatics',
+      'BMI 5300 — Foundations of Biomedical Information Sciences I',
+    ],
   },
   {
     school: 'Prairie View A&M University',

@@ -88,4 +88,20 @@ describe('Degree', () => {
     const article = document.querySelector('article.degree-container');
     expect(article).toBeInTheDocument();
   });
+
+  it('renders coursework when provided', () => {
+    render(
+      <Degree
+        data={{
+          ...mockDegree,
+          coursework: ['BMI 5301 — Introduction to Bioinformatics'],
+        }}
+      />,
+    );
+
+    expect(screen.getByText('Relevant coursework')).toBeInTheDocument();
+    expect(
+      screen.getByText('BMI 5301 — Introduction to Bioinformatics'),
+    ).toBeInTheDocument();
+  });
 });
