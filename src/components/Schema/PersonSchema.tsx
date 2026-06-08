@@ -1,6 +1,6 @@
 import contact from '@/data/contact';
 import degrees from '@/data/resume/degrees';
-import work from '@/data/resume/work';
+import { currentPosition } from '@/data/resume/work';
 import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
 import JsonLd from './JsonLd';
 
@@ -14,8 +14,7 @@ export default function PersonSchema() {
   const emailItem = contact.find((item) => item.link.startsWith('mailto:'));
   const email = emailItem?.link.replace('mailto:', '');
 
-  // Current job from work.ts (first entry)
-  const currentJob = work[0];
+  const currentJob = currentPosition;
 
   const personData = {
     '@context': 'https://schema.org',

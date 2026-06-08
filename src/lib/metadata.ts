@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { AUTHOR_NAME, SITE_URL, TWITTER_HANDLE } from './utils';
+import { AUTHOR_NAME, SITE_URL } from './utils';
 
 interface PageMetadataOptions {
   title: string;
@@ -13,7 +13,12 @@ export function createPageMetadata({
   description,
   path,
 }: PageMetadataOptions): Metadata {
-  const absoluteUrl = path ? new URL(path, SITE_URL).toString() : undefined;
+  const absoluteUrl = path
+    ? new URL(
+        path.startsWith('/') ? path.slice(1) : path,
+        `${SITE_URL}/`,
+      ).toString()
+    : undefined;
   const pageTitle = `${title} | ${AUTHOR_NAME}`;
 
   return {
@@ -37,8 +42,6 @@ export function createPageMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      site: TWITTER_HANDLE,
-      creator: TWITTER_HANDLE,
       title: pageTitle,
       description,
       images: ['/images/me.jpg'],

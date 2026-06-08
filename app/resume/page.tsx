@@ -10,13 +10,13 @@ import PageWrapper from '@/components/Template/PageWrapper';
 import courses from '@/data/resume/courses';
 import degrees from '@/data/resume/degrees';
 import { categories, skills } from '@/data/resume/skills';
-import work from '@/data/resume/work';
+import experienceSections from '@/data/resume/work';
 import { createPageMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
   description:
-    "Michael D'Angelo's Resume. OpenAI, Promptfoo, Smile ID, Arthena, Matroid, Stanford ICME, YC alum.",
+    "Chibuzor Anthony Enyioko's resume — clinical and research experience, biomedical informatics education, and bioinformatics projects.",
   path: '/resume/',
 });
 
@@ -27,12 +27,10 @@ export default function ResumePage() {
         <header className="resume-header">
           <h1 className="resume-title">Resume</h1>
           <p className="resume-summary">
-            Engineering leader with 15+ years building products across AI,
-            security, and infrastructure. Currently Member of the Technical
-            Staff at OpenAI, where I work on Promptfoo and agent security.
-            Previously co-founded Promptfoo, built it into an AI security
-            platform, and sold it to OpenAI. Stanford MS, YC alum, previously VP
-            Engineering.
+            Aspiring computational biologist and biomedical informatics student
+            in Houston, TX, with clinical laboratory experience and hands-on
+            research in spatial transcriptomics, immunology, variant analysis,
+            and NGS workflows.
           </p>
         </header>
 
@@ -40,7 +38,7 @@ export default function ResumePage() {
 
         <div className="resume-content">
           <section id="experience" className="resume-section">
-            <Experience data={work} />
+            <Experience sections={experienceSections} />
           </section>
 
           <section id="education" className="resume-section">

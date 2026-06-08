@@ -3,9 +3,10 @@
  */
 
 // Site configuration
-export const SITE_URL = 'https://mldangelo.com';
-export const AUTHOR_NAME = "Michael D'Angelo";
-export const TWITTER_HANDLE = '@dangelosaurus';
+export const SITE_URL = 'https://aenyioko.github.io/personal-site';
+export const AUTHOR_NAME = 'Chibuzor Anthony Enyioko';
+export const EMAIL_LOCAL = 'aenyioko090';
+export const EMAIL_DOMAIN = 'gmail.com';
 
 // Image dimension constants
 export const AVATAR_SIZE = {

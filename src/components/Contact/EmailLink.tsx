@@ -2,6 +2,8 @@
 
 import { useEffect, useReducer, useRef, useState } from 'react';
 
+import { EMAIL_DOMAIN, EMAIL_LOCAL } from '@/lib/utils';
+
 // Animation timing constants
 const ANIMATION_TICK_MS = 50; // Tick length in milliseconds
 const HOLD_TICKS_AFTER_MESSAGE = 50; // Ticks to wait after message completes
@@ -18,6 +20,7 @@ function prefersReducedMotion(): boolean {
 }
 
 const messages = [
+  EMAIL_LOCAL,
   'hi',
   'hello',
   'hola',
@@ -143,10 +146,11 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
     state.isActive && !reducedMotion ? ANIMATION_TICK_MS : null,
   );
 
-  // Use 'hi' as default message when reduced motion or paused with empty message
+  // Use the real local part as default when reduced motion or paused with empty message
   const displayMessage =
-    reducedMotion || state.message === '' ? 'hi' : state.message;
-  const isValid = validateText(displayMessage);
+    reducedMotion || state.message === '' ? EMAIL_LOCAL : state.message;
+  const isValid =
+    validateText(displayMessage) && displayMessage === EMAIL_LOCAL;
 
   const handlePause = () => dispatch({ type: 'PAUSE' });
   const handleResume = () => {
@@ -170,7 +174,7 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
   const emailContent = (
     <>
       <span className="contact-email-prefix">{displayMessage}</span>
-      <span className="contact-email-domain">@mldangelo.com</span>
+      <span className="contact-email-domain">@{EMAIL_DOMAIN}</span>
     </>
   );
 
@@ -182,7 +186,7 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
     >
       {isValid ? (
         <a
-          href={`mailto:${displayMessage}@mldangelo.com`}
+          href={`mailto:${EMAIL_LOCAL}@${EMAIL_DOMAIN}`}
           className="contact-email-link"
           onClick={handleClick}
           onKeyDown={handleKeyDown}

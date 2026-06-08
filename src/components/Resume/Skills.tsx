@@ -72,11 +72,9 @@ export default function Skills({ skills, categories }: SkillsProps) {
 
   // Memoize sorting, filtering, and grouping to avoid recalculating on every render
   const groupedSkills = useMemo(() => {
-    // Sort skills by competency (highest first), then alphabetically
-    const sortedSkills = [...skills].sort((a, b) => {
-      if (a.competency !== b.competency) return b.competency - a.competency;
-      return a.title.localeCompare(b.title);
-    });
+    const sortedSkills = [...skills].sort((a, b) =>
+      a.title.localeCompare(b.title),
+    );
 
     // Filter skills based on active category
     const filteredSkills = sortedSkills.filter(

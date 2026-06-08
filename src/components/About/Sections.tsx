@@ -19,10 +19,8 @@ interface ParsedAboutSection {
 }
 
 const sectionVariants: Record<string, string> = {
-  'Fun Facts': 'about-section--compact',
-  'I Like': 'about-section--compact',
-  'I Dream Of': 'about-section--compact',
-  'Websites from People I Admire': 'about-section--links',
+  Hobbies: 'about-section--compact',
+  Interests: 'about-section--compact',
 };
 
 function splitAboutMarkdown(markdown: string) {

@@ -17,35 +17,13 @@ describe('SkillTag', () => {
     expect(screen.getByText('Python')).toBeInTheDocument();
   });
 
-  it('applies large size class for competency 5', () => {
+  it('uses a uniform medium size class', () => {
     const skill = { title: 'Python', competency: 5, category: ['Languages'] };
 
     render(<SkillTag data={skill} categories={mockCategories} />);
 
     const tag = document.querySelector('.skill-tag');
-    expect(tag).toHaveClass('skill-tag--lg');
-  });
-
-  it('applies medium size class for competency 4', () => {
-    const skill = {
-      title: 'JavaScript',
-      competency: 4,
-      category: ['Languages'],
-    };
-
-    render(<SkillTag data={skill} categories={mockCategories} />);
-
-    const tag = document.querySelector('.skill-tag');
     expect(tag).toHaveClass('skill-tag--md');
-  });
-
-  it('applies small size class for competency 3 or below', () => {
-    const skill = { title: 'Ruby', competency: 3, category: ['Languages'] };
-
-    render(<SkillTag data={skill} categories={mockCategories} />);
-
-    const tag = document.querySelector('.skill-tag');
-    expect(tag).toHaveClass('skill-tag--sm');
   });
 
   it('sets category color as CSS variable', () => {
@@ -67,7 +45,6 @@ describe('SkillTag', () => {
     render(<SkillTag data={skill} categories={mockCategories} />);
 
     const tag = document.querySelector('.skill-tag') as HTMLElement;
-    // Should use Languages color since it's first in categories list
     expect(tag.style.getPropertyValue('--tag-color')).toBe('#6968b3');
   });
 });

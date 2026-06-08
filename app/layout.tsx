@@ -5,7 +5,7 @@ import Script from 'next/script';
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
 import Navigation from '@/components/Template/Navigation';
 import ScrollToTop from '@/components/Template/ScrollToTop';
-import { AUTHOR_NAME, SITE_URL, TWITTER_HANDLE } from '@/lib/utils';
+import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
 import './tailwind.css';
 
 const sourceSans = Source_Sans_3({
@@ -27,7 +27,7 @@ const raleway = Raleway({
 });
 
 const siteDescription =
-  'Member of the Technical Staff at OpenAI, working on Promptfoo and agent security. Previously co-founded Promptfoo, Arthena, and Matroid, and led engineering at Smile ID.';
+  'Aspiring computational biologist and biomedical informatics student in Houston, TX. Exploring spatial transcriptomics, immunology, and genomic data analysis.';
 
 export const metadata: Metadata = {
   title: {
@@ -37,13 +37,14 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     AUTHOR_NAME,
-    'OpenAI',
-    'Promptfoo',
-    'agent security',
-    'LLM security',
-    'machine learning',
-    'startup founder',
-    'YC',
+    'computational biology',
+    'bioinformatics',
+    'spatial transcriptomics',
+    'immunology',
+    'genomics',
+    'NGS',
+    'Python',
+    'R',
   ],
   authors: [{ name: AUTHOR_NAME }],
   creator: AUTHOR_NAME,
@@ -66,8 +67,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: TWITTER_HANDLE,
-    creator: TWITTER_HANDLE,
     title: AUTHOR_NAME,
     description: siteDescription,
     images: ['/images/me.jpg'],

@@ -7,11 +7,11 @@ import { generateMetadata } from './page';
 describe('writing post metadata', () => {
   it('uses a trailing-slash canonical URL for posts', async () => {
     const metadata = await generateMetadata({
-      params: Promise.resolve({ slug: 'claude-code-outage' }),
+      params: Promise.resolve({ slug: 'hello-world' }),
     });
 
     expect(metadata.openGraph?.url).toBe(
-      `${SITE_URL}/writing/claude-code-outage/`,
+      `${SITE_URL}/writing/hello-world/`,
     );
   });
 });

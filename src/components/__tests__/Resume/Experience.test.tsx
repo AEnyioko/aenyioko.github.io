@@ -23,38 +23,51 @@ const mockJobs = [
   },
 ];
 
+const mockSections = [
+  {
+    title: 'Clinical Experience',
+    positions: mockJobs,
+  },
+];
+
 describe('Experience', () => {
   it('renders the experience section with title', () => {
-    render(<Experience data={mockJobs} />);
+    render(<Experience sections={mockSections} />);
 
     expect(
-      screen.getByRole('heading', { name: /experience/i }),
+      screen.getByRole('heading', { level: 3, name: 'Experience' }),
     ).toBeInTheDocument();
   });
 
+  it('renders section groups', () => {
+    render(<Experience sections={mockSections} />);
+
+    expect(screen.getByText('Clinical Experience')).toBeInTheDocument();
+  });
+
   it('renders all jobs', () => {
-    render(<Experience data={mockJobs} />);
+    render(<Experience sections={mockSections} />);
 
     expect(screen.getByText('Acme Corp')).toBeInTheDocument();
     expect(screen.getByText('Startup Inc')).toBeInTheDocument();
   });
 
   it('renders job positions', () => {
-    render(<Experience data={mockJobs} />);
+    render(<Experience sections={mockSections} />);
 
     expect(screen.getByText(/Senior Engineer/)).toBeInTheDocument();
     expect(screen.getByText(/Software Engineer/)).toBeInTheDocument();
   });
 
   it('has anchor link for navigation', () => {
-    render(<Experience data={mockJobs} />);
+    render(<Experience sections={mockSections} />);
 
     const anchor = document.getElementById('experience');
     expect(anchor).toBeInTheDocument();
   });
 
   it('renders jobs with company links', () => {
-    render(<Experience data={mockJobs} />);
+    render(<Experience sections={mockSections} />);
 
     const links = screen.getAllByRole('link');
     expect(
@@ -65,13 +78,12 @@ describe('Experience', () => {
     ).toBe(true);
   });
 
-  it('handles empty jobs array', () => {
-    render(<Experience data={[]} />);
+  it('handles empty sections array', () => {
+    render(<Experience sections={[]} />);
 
     expect(
-      screen.getByRole('heading', { name: /experience/i }),
+      screen.getByRole('heading', { level: 3, name: 'Experience' }),
     ).toBeInTheDocument();
-    // No job articles
     const articles = document.querySelectorAll('.jobs-container');
     expect(articles.length).toBe(0);
   });

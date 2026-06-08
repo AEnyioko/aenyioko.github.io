@@ -42,13 +42,13 @@ Hello from the intro.
 
 Lead paragraph.
 
-# I Like
+# Hobbies
 
-- Running
+- Reading
 
-# Websites from People I Admire
+# Interests
 
-- [Example](https://example.com)`}
+- Immunology`}
       />,
     );
 
@@ -56,7 +56,7 @@ Lead paragraph.
 
     expect(sections).toHaveLength(2);
     expect(sections[0]).toHaveClass('about-section--compact');
-    expect(sections[1]).toHaveClass('about-section--links');
+    expect(sections[1]).toHaveClass('about-section--compact');
   });
 
   it('adds stable heading ids for deep links', () => {
@@ -111,10 +111,10 @@ Lead paragraph.
       <AboutContent markdown={aboutMarkdown} />,
     );
 
-    expect(html).toContain('href="#some-history"');
-    expect(html).toContain('id="some-history"');
-    expect(html).toContain('href="#travel-geography"');
-    expect(html).toContain('id="travel-geography"');
+    expect(html).toContain('href="#what-im-working-on"');
+    expect(html).toContain('id="what-im-working-on"');
+    expect(html).toContain('href="#interests"');
+    expect(html).toContain('id="interests"');
   });
 
   it('supports same-page hash navigation from section links', async () => {
@@ -124,30 +124,30 @@ Lead paragraph.
 
     const nav = screen.getByRole('navigation', { name: 'About sections' });
     const navLink = within(nav).getByRole('link', {
-      name: 'Travel / Geography',
+      name: "What I'm Working On",
     });
 
     navLink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#travel-geography');
+      expect(window.location.hash).toBe('#what-im-working-on');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Travel / Geography',
+      "What I'm Working On",
     );
 
-    const heading = screen.getByRole('heading', { name: 'Fun Facts' });
+    const heading = screen.getByRole('heading', { name: 'Interests' });
     const permalink = within(heading).getByRole('link', {
-      name: 'Fun Facts',
+      name: 'Interests',
     });
 
     permalink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#fun-facts');
+      expect(window.location.hash).toBe('#interests');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Fun Facts',
+      'Interests',
     );
   });
 });

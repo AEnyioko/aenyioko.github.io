@@ -28,6 +28,7 @@
 
 .resume-page .education .title h3,
 .resume-page .experience .title h3,
+.resume-page .experience-group-title,
 .resume-page .skills .title h3,
 .resume-page .courses .title h3,
 .resume-page .references .title h3 {
@@ -38,6 +39,17 @@
   display: inline-block;
   padding-bottom: 0.75rem;
   border-bottom: 3px solid var(--color-accent);
+}
+
+.resume-page .experience-group {
+  margin-bottom: 2.5rem;
+}
+
+.resume-page .experience-group-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-fg-bold);
+  margin: 0 0 1.25rem;
 }
 
 .resume-page .skills {

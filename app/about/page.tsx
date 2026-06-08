@@ -8,7 +8,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'About',
   description:
-    "Learn about Michael D'Angelo - Member of the Technical Staff at OpenAI and builder across AI, security, and infrastructure.",
+    'Learn about Chibuzor Anthony Enyioko — aspiring computational biologist exploring spatial transcriptomics, immunology, and genomic data analysis.',
   path: '/about/',
 });
 
