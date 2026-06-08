@@ -81,8 +81,11 @@ describe('projects data', () => {
     }
   });
 
-  it('has at least one featured project', () => {
-    const featured = projects.filter((p) => p.featured);
-    expect(featured.length).toBeGreaterThanOrEqual(1);
+  it('includes Rosalind with the archive image', () => {
+    const rosalind = projects.find((project) => project.title === 'Rosalind');
+
+    expect(rosalind).toBeDefined();
+    expect(rosalind?.date.startsWith('2024')).toBe(true);
+    expect(rosalind?.image).toBe('/images/projects/rosalind.png');
   });
 });

@@ -8,7 +8,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Archive',
   description:
-    'Bioinformatics and data analysis projects by Chibuzor Anthony Enyioko, including MPN dataset harmonization, NGS workflows, and variant analysis.',
+    'Archive of early projects by Chibuzor Anthony Enyioko, including Python solutions to Rosalind bioinformatics challenges.',
   path: '/projects/',
 });
 
