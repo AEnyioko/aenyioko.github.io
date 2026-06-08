@@ -4,7 +4,7 @@ I'm a bioinformatics student based in Houston, TX, exploring my interests in spa
 
 Most of my hands-on analysis work lives on [GitHub](https://github.com/AEnyioko), where I build reproducible notebooks around gene expression, variant analysis, and single-cell workflows. I'm especially interested in connecting clinical context with computational methods that make complex biological data easier to interpret.
 
-If you're working on genomics, immunology, or biomedical data science, I'd love to connect.
+If you're working on genomics, immunology, or biomedical data science, let's connect!
 
 # What I'm Working On
 
@@ -20,12 +20,12 @@ If you're working on genomics, immunology, or biomedical data science, I'd love 
 - Space
 - Learning languages — having fun learning Japanese, currently around N4
 
-# Interests
+# Likes & Interests
 
 - Immunology
 - Spatial transcriptomics
 - Machine learning
-- Variant analysis
+- Winter
 
-If you'd like to collaborate, compare notes, or talk through a project idea, [get in touch](/contact/).
+If you'd like to collaborate, compare notes, or just chat, let's [get in touch](/contact/).
 `;
