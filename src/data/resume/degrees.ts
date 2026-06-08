@@ -10,7 +10,7 @@ const degrees: Degree[] = [
   {
     school: 'UTHealth McWilliams School of Biomedical Informatics',
     degree: 'Master of Science in Biomedical Informatics (Expected May 2027)',
-    link: 'https://www.uth.edu/bmi',
+    link: 'https://sbmi.uth.edu/',
     year: 2027,
     coursework: [
       'BMI 5301 — Introduction to Bioinformatics',

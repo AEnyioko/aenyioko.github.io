@@ -27,7 +27,7 @@ const data: ContactItem[] = [
     icon: faGoodreads,
   },
   {
-    link: 'mailto:aenyioko090@gmail.com',
+    link: 'mailto:chibuzor.a.enyioko@uth.tmc.edu',
     label: 'Email',
     icon: faEnvelope,
   },

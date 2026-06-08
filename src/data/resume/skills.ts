@@ -19,7 +19,7 @@ const skills: Skill[] = [
   {
     title: 'Bash',
     competency: 3,
-    category: [PROGRAMMING_AND_DATA_ANALYSIS, 'Tools'],
+    category: [PROGRAMMING_AND_DATA_ANALYSIS],
   },
   { title: 'SQL', competency: 3, category: [PROGRAMMING_AND_DATA_ANALYSIS] },
   { title: 'Jupyter', competency: 3, category: ['Tools'] },
@@ -47,12 +47,7 @@ const skills: Skill[] = [
     competency: 3,
     category: ['Bioinformatics'],
   },
-  {
-    title: 'Data Visualization',
-    competency: 3,
-    category: [PROGRAMMING_AND_DATA_ANALYSIS],
-  },
-  { title: 'Git & GitHub', competency: 3, category: ['Tools'] },
+  { title: 'Git', competency: 3, category: ['Tools'] },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
 const CATEGORY_COLORS: { color: string; textColor: 'dark' | 'light' }[] = [

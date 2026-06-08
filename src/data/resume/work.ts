@@ -18,6 +18,23 @@ export interface ExperienceSection {
 
 const experienceSections: ExperienceSection[] = [
   {
+    title: 'Research Experience',
+    positions: [
+      {
+        name: 'Prairie View A&M University',
+        position: 'Student Laboratory Aide',
+        url: 'https://www.pvamu.edu',
+        startDate: '2021-06-01',
+        endDate: '2021-12-01',
+        highlights: [
+          'Maintained laboratory inventory of chemicals and reagents.',
+          'Operated an IR spectrometer for compound identification and analysis.',
+          'Assisted in experimental design and protocol execution.',
+        ],
+      },
+    ],
+  },
+  {
     title: 'Clinical Experience',
     positions: [
       {
@@ -55,23 +72,6 @@ const experienceSections: ExperienceSection[] = [
     ],
   },
   {
-    title: 'Research Experience',
-    positions: [
-      {
-        name: 'Prairie View A&M University',
-        position: 'Student Laboratory Aide',
-        url: 'https://www.pvamu.edu',
-        startDate: '2021-06-01',
-        endDate: '2021-12-01',
-        highlights: [
-          'Maintained laboratory inventory of chemicals and reagents.',
-          'Operated an IR spectrometer for compound identification and analysis.',
-          'Assisted in experimental design and protocol execution.',
-        ],
-      },
-    ],
-  },
-  {
     title: 'Independent Projects',
     positions: [
       {
@@ -89,7 +89,11 @@ const experienceSections: ExperienceSection[] = [
   },
 ];
 
-export const currentPosition = experienceSections[0].positions[0];
+export const currentPosition =
+  experienceSections
+    .find((section) => section.title === 'Clinical Experience')
+    ?.positions.find((position) => position.name === 'NeoGenomics Laboratories') ??
+  experienceSections[0].positions[0];
 
 const work: Position[] = experienceSections.flatMap(
   (section) => section.positions,

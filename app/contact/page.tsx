@@ -9,7 +9,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Contact',
   description:
-    'Contact Chibuzor Anthony Enyioko via email at aenyioko090@gmail.com',
+    'Contact Chibuzor Anthony Enyioko via email at chibuzor.a.enyioko@uth.tmc.edu',
   path: '/contact/',
 });
 

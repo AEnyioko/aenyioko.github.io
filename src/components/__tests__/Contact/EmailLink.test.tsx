@@ -7,14 +7,17 @@ describe('EmailLink', () => {
   it('renders the primary contact email', () => {
     render(<EmailLink />);
 
-    expect(screen.getByText('aenyioko090')).toBeInTheDocument();
-    expect(screen.getByText('@gmail.com')).toBeInTheDocument();
+    expect(screen.getByText('chibuzor.a.enyioko')).toBeInTheDocument();
+    expect(screen.getByText('@uth.tmc.edu')).toBeInTheDocument();
   });
 
   it('renders as a mailto link', () => {
     render(<EmailLink />);
 
     const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', 'mailto:aenyioko090@gmail.com');
+    expect(link).toHaveAttribute(
+      'href',
+      'mailto:chibuzor.a.enyioko@uth.tmc.edu',
+    );
   });
 });

@@ -6,8 +6,8 @@
 export const SITE_URL = 'https://aenyioko.github.io/personal-site';
 export const AUTHOR_NAME = 'Chibuzor Anthony Enyioko';
 export const FOOTER_ROLE = 'Student of Biomedical Informatics';
-export const EMAIL_LOCAL = 'aenyioko090';
-export const EMAIL_DOMAIN = 'gmail.com';
+export const EMAIL_LOCAL = 'chibuzor.a.enyioko';
+export const EMAIL_DOMAIN = 'uth.tmc.edu';
 
 // Image dimension constants
 export const AVATAR_SIZE = {

@@ -7,8 +7,8 @@ describe('work data', () => {
     expect(Array.isArray(experienceSections)).toBe(true);
     expect(experienceSections.length).toBeGreaterThan(0);
     expect(experienceSections.map((section) => section.title)).toEqual([
-      'Clinical Experience',
       'Research Experience',
+      'Clinical Experience',
       'Independent Projects',
     ]);
   });
