@@ -11,16 +11,22 @@ export interface Category {
   textColor: 'dark' | 'light';
 }
 
+const PROGRAMMING_AND_DATA_ANALYSIS = 'Programming and Data Analysis';
+
 const skills: Skill[] = [
-  { title: 'Python', competency: 3, category: ['Languages', 'Bioinformatics'] },
-  { title: 'R', competency: 3, category: ['Languages', 'Bioinformatics'] },
-  { title: 'Bash', competency: 3, category: ['Languages', 'Tools'] },
-  { title: 'SQL', competency: 3, category: ['Languages', 'Data Analysis'] },
-  { title: 'Jupyter', competency: 3, category: ['Bioinformatics', 'Tools'] },
+  { title: 'Python', competency: 3, category: [PROGRAMMING_AND_DATA_ANALYSIS] },
+  { title: 'R', competency: 3, category: [PROGRAMMING_AND_DATA_ANALYSIS] },
+  {
+    title: 'Bash',
+    competency: 3,
+    category: [PROGRAMMING_AND_DATA_ANALYSIS, 'Tools'],
+  },
+  { title: 'SQL', competency: 3, category: [PROGRAMMING_AND_DATA_ANALYSIS] },
+  { title: 'Jupyter', competency: 3, category: ['Tools'] },
   { title: 'Bioconductor', competency: 3, category: ['Bioinformatics'] },
-  { title: 'Docker', competency: 3, category: ['Tools', 'Infrastructure'] },
-  { title: 'Pandas', competency: 3, category: ['Data Analysis'] },
-  { title: 'NumPy', competency: 3, category: ['Data Analysis'] },
+  { title: 'Docker', competency: 3, category: ['Tools'] },
+  { title: 'Pandas', competency: 3, category: [PROGRAMMING_AND_DATA_ANALYSIS] },
+  { title: 'NumPy', competency: 3, category: [PROGRAMMING_AND_DATA_ANALYSIS] },
   {
     title: 'NGS Analysis',
     competency: 3,
@@ -37,19 +43,14 @@ const skills: Skill[] = [
     category: ['Bioinformatics'],
   },
   {
-    title: 'Machine Learning',
-    competency: 3,
-    category: ['Machine Learning', 'Data Analysis'],
-  },
-  {
     title: 'scRNA-seq Analysis',
     competency: 3,
-    category: ['Bioinformatics', 'Machine Learning'],
+    category: ['Bioinformatics'],
   },
   {
     title: 'Data Visualization',
     competency: 3,
-    category: ['Data Analysis'],
+    category: [PROGRAMMING_AND_DATA_ANALYSIS],
   },
   { title: 'Git & GitHub', competency: 3, category: ['Tools'] },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
