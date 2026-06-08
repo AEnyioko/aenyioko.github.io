@@ -27,20 +27,20 @@ export default function ResumePage() {
           <p className="resume-summary">
             Aspiring computational biologist and biomedical informatics student
             in Houston, TX, with clinical laboratory experience and hands-on
-            research in spatial transcriptomics, immunology, variant analysis,
-            and NGS workflows.
+            research in variant analysis,and NGS workflows.
           </p>
         </header>
 
         <ResumeNav />
 
         <div className="resume-content">
-          <section id="experience" className="resume-section">
-            <Experience sections={experienceSections} />
-          </section>
-
+      
           <section id="education" className="resume-section">
             <Education data={degrees} />
+          </section>
+
+          <section id="experience" className="resume-section">
+            <Experience sections={experienceSections} />
           </section>
 
           <section id="skills" className="resume-section">
