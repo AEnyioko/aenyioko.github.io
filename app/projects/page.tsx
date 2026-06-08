@@ -22,7 +22,7 @@ export default function ProjectsPage() {
         <header className="projects-header">
           <h1 className="page-title">Archive</h1>
           <p className="page-subtitle">
-            Early projects and experiments from my student years
+            Early projects and past experiments
           </p>
         </header>
 

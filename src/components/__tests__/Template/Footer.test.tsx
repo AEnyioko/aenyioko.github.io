@@ -16,7 +16,7 @@ describe('Footer', () => {
 
     expect(screen.getByText('Chibuzor Anthony Enyioko')).toBeInTheDocument();
     expect(
-      screen.getByText('Accessioning Technician I at NeoGenomics Laboratories'),
+      screen.getByText('Student of Biomedical Informatics'),
     ).toBeInTheDocument();
   });
 

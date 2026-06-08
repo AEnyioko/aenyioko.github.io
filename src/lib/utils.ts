@@ -5,6 +5,7 @@
 // Site configuration
 export const SITE_URL = 'https://aenyioko.github.io/personal-site';
 export const AUTHOR_NAME = 'Chibuzor Anthony Enyioko';
+export const FOOTER_ROLE = 'Student of Biomedical Informatics';
 export const EMAIL_LOCAL = 'aenyioko090';
 export const EMAIL_DOMAIN = 'gmail.com';
 

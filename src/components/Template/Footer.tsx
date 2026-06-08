@@ -1,14 +1,11 @@
 import Link from 'next/link';
 
 import ContactIcons from '@/components/Contact/ContactIcons';
-import { currentPosition } from '@/data/resume/work';
-import { AUTHOR_NAME } from '@/lib/utils';
+import { AUTHOR_NAME, FOOTER_ROLE } from '@/lib/utils';
 
 import ThemePortrait from './ThemePortrait';
 
 export default function Footer() {
-  const currentRole = `${currentPosition.position} at ${currentPosition.name}`;
-
   return (
     <footer className="site-footer-new">
       <div className="footer-content">
@@ -18,7 +15,7 @@ export default function Footer() {
           </Link>
           <div className="footer-info">
             <h3>{AUTHOR_NAME}</h3>
-            <p className="footer-role">{currentRole}</p>
+            <p className="footer-role">{FOOTER_ROLE}</p>
             <p className="footer-copyright">
               &copy; {new Date().getFullYear()} ·{' '}
               <a
