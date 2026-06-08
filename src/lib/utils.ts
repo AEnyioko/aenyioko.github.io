@@ -8,6 +8,12 @@ export const AUTHOR_NAME = 'Chibuzor Anthony Enyioko';
 export const FOOTER_ROLE = 'Student of Biomedical Informatics';
 export const EMAIL_LOCAL = 'chibuzor.a.enyioko';
 export const EMAIL_DOMAIN = 'uth.tmc.edu';
+export const PORTRAIT_IMAGE = '/images/me.jpg';
+export const SHARE_IMAGE = '/images/thumbnail.jpg';
+export const SHARE_IMAGE_SIZE = {
+  width: 1200,
+  height: 630,
+} as const;
 
 // Image dimension constants
 export const AVATAR_SIZE = {

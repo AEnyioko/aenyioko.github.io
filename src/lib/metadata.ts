@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 
-import { AUTHOR_NAME, SITE_URL } from './utils';
+import {
+  AUTHOR_NAME,
+  SHARE_IMAGE,
+  SHARE_IMAGE_SIZE,
+  SITE_URL,
+} from './utils';
 
 interface PageMetadataOptions {
   title: string;
@@ -33,9 +38,9 @@ export function createPageMetadata({
       ...(absoluteUrl ? { url: absoluteUrl } : {}),
       images: [
         {
-          url: '/images/me.jpg',
-          width: 1200,
-          height: 630,
+          url: SHARE_IMAGE,
+          width: SHARE_IMAGE_SIZE.width,
+          height: SHARE_IMAGE_SIZE.height,
           alt: AUTHOR_NAME,
         },
       ],
@@ -44,7 +49,7 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title: pageTitle,
       description,
-      images: ['/images/me.jpg'],
+      images: [SHARE_IMAGE],
     },
   };
 }

@@ -5,7 +5,12 @@ import Script from 'next/script';
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
 import Navigation from '@/components/Template/Navigation';
 import ScrollToTop from '@/components/Template/ScrollToTop';
-import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
+import {
+  AUTHOR_NAME,
+  SHARE_IMAGE,
+  SHARE_IMAGE_SIZE,
+  SITE_URL,
+} from '@/lib/utils';
 import './tailwind.css';
 
 const sourceSans = Source_Sans_3({
@@ -58,9 +63,9 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: '/images/me.jpg',
-        width: 1200,
-        height: 630,
+        url: SHARE_IMAGE,
+        width: SHARE_IMAGE_SIZE.width,
+        height: SHARE_IMAGE_SIZE.height,
         alt: AUTHOR_NAME,
       },
     ],
@@ -69,7 +74,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: AUTHOR_NAME,
     description: siteDescription,
-    images: ['/images/me.jpg'],
+    images: [SHARE_IMAGE],
   },
   robots: {
     index: true,
