@@ -17,6 +17,22 @@ export interface ExperienceSection {
 }
 
 const experienceSections: ExperienceSection[] = [
+    {
+    title: 'Independent Projects',
+    positions: [
+      {
+        name: 'Co-occurring Mutations and Transcriptional Consequences of JAK2 V617F in MPN Phenotypes',
+        position: 'Bioinformatics Research Project',
+        url: 'https://github.com/AEnyioko/MPNDataset',
+        startDate: '2026-03-01',
+        highlights: [
+          'Execute scRNA-seq QC/filtering pipelines across 23,000+ samples to characterize immune cell transcriptional signatures in myeloproliferative neoplasm phenotypes.',
+          'Build harmonized, genotype-stratified reference datasets to identify biomarkers distinguishing MPN phenotypes.',
+          'Maintain reproducible, detailed analysis records in Jupyter Notebooks.',
+        ],
+      },
+    ],
+  },
   {
     title: 'Research Experience',
     positions: [
@@ -67,22 +83,6 @@ const experienceSections: ExperienceSection[] = [
         highlights: [
           'Processed 100+ specimens daily and developed an Excel-based productivity tracker to improve throughput reporting and organization.',
           'Managed large-scale patient and specimen data in compliance with laboratory standards.',
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Independent Projects',
-    positions: [
-      {
-        name: 'Co-occurring Mutations and Transcriptional Consequences of JAK2 V617F in MPN Phenotypes',
-        position: 'Bioinformatics Research Project',
-        url: 'https://github.com/AEnyioko/MPNDataset',
-        startDate: '2026-03-01',
-        highlights: [
-          'Execute scRNA-seq QC/filtering pipelines across 23,000+ samples to characterize immune cell transcriptional signatures in myeloproliferative neoplasm phenotypes.',
-          'Build harmonized, genotype-stratified reference datasets to identify biomarkers distinguishing MPN phenotypes.',
-          'Maintain reproducible, detailed analysis records in Jupyter Notebooks.',
         ],
       },
     ],
